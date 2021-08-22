@@ -9,4 +9,5 @@ Nova sessão
     Open Browser                    ${url}                      chrome
 
 Encerra Browser
+    Capture Page Screenshot
     Close Browser
