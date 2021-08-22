@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210822 12:01:25.987" rpa="false" schemaversion="2">
-<suite id="s1" name="Test" source="c:\qaninja\robot\test.robot">
-<test id="s1-t1" name="Deve retornar mensagem de boas vindas">
-<kw name="Welcome" library="app">
-<var>${result}</var>
-<arg>Aline</arg>
-<msg timestamp="20210822 12:01:26.034" level="INFO">${result} = Olá Aline, Bem vindo ao Curso básico de Robot Framework!</msg>
-<status status="PASS" starttime="20210822 12:01:26.033" endtime="20210822 12:01:26.034"/>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210822 12:27:34.180" rpa="false" schemaversion="2">
+<suite id="s1" name="Title" source="c:\qaninja\robot\web\title.robot">
+<test id="s1-t1" name="Should See Page Title">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://training-wheels-protocol.herokuapp.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210822 12:27:34.553" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
+<status status="PASS" starttime="20210822 12:27:34.553" endtime="20210822 12:27:38.813"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210822 12:01:26.035" endtime="20210822 12:01:26.037"/>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Training Wheels Protocol</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210822 12:27:38.824" level="INFO">Page title is 'Training Wheels Protocol'.</msg>
+<status status="PASS" starttime="20210822 12:27:38.814" endtime="20210822 12:27:38.824"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${result}</arg>
-<arg>Olá Aline, Bem vindo ao Curso básico de Robot Framework!</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210822 12:01:26.037" endtime="20210822 12:01:26.038"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210822 12:27:38.825" endtime="20210822 12:27:41.091"/>
 </kw>
-<status status="PASS" starttime="20210822 12:01:26.032" endtime="20210822 12:01:26.038"/>
+<status status="PASS" starttime="20210822 12:27:34.550" endtime="20210822 12:27:41.093"/>
 </test>
-<status status="PASS" starttime="20210822 12:01:25.991" endtime="20210822 12:01:26.041"/>
+<status status="PASS" starttime="20210822 12:27:34.183" endtime="20210822 12:27:41.097"/>
 </suite>
 <statistics>
 <total>
@@ -30,7 +30,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Title">Title</stat>
 </suite>
 </statistics>
 <errors>
